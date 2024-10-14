@@ -1,5 +1,21 @@
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Outfit", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border: 0;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
 }
 
 body {
@@ -7,73 +23,58 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
   height: 100vh;
 }
 
-.attribution {
+.main {
   background-color: hsl(0, 0%, 100%);
-  width: 632px;
-  height: 452px;
-  display: flex;
+  max-width: 632px;
+  padding: 16px;
+  height: auto;
+  min-height: 452px;
   border-radius: 20px;
-  flex-direction: column;
-  border: 2px solid black;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
 }
-.scanner {
-  width: 288px;
-  height: 288px;
+
+.main img {
+  object-fit: cover;
+  max-width: 288px;
+  aspect-ratio: 1;
   overflow: hidden;
-  margin-top: 16px;
-  margin-left: 16px;
   border-radius: 10px;
   margin-bottom: 24px;
 }
-.scanner img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
 .textone,
 .texttwo {
-  text-align: center;
   font-size: 15px;
   color: hsl(218, 44%, 22%);
-  width: 568px;
 }
 
 .text {
-  width: 600px;
-  height: 84px;
-  margin-left: 16px;
-  margin-right: 16px;
+  max-width: 600px;
+  text-align: center;
 }
 .textone {
-  height: 26px;
-  margin: 0px 16px 16px 16px;
+  margin-bottom: 16px;
   font-weight: 700;
 }
 .texttwo {
   font-weight: 400;
-  height: 42px;
-  margin: 0px 16px 0px 16px;
 }
 
 @media (max-width: 375px) {
-  .attribution {
-    width: 320px;
-    height: 499px;
+  .main {
+    max-width: 320px;
+    min-height: 499px;
+    padding: 16px;
   }
   .text {
-    width: 288px;
-    height: 131px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
   }
-  .textone {
-    width: 256px;
-    height: 52px;
-  }
+  .textone,
   .texttwo {
-    width: 256px;
-    height: 63px;
+    max-width: 100%;
   }
 }
